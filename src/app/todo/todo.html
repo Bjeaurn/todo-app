@@ -1,0 +1,2 @@
+<label [ngClass]="{completed: todo.isCompleted() }"><input type="checkbox" (click)="todo.check()"/> <span>{{todo.title}}</span></label>
+<pre *ngIf="debug">{{todo | json}}</pre>

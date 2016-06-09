@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+  <div class="panel-heading">{{list.title}}</div>
+  <div class="panel-body">
+      <style>
+          ul { list-style-type: none; list-style-position: outside; margin: 0; padding: 0;}
+          ul > li { padding: 0.2em; border-bottom: 1px solid #efefef; }
+          ul > li:last-child { border-bottom: 0; }
+      </style>
+      <input type="text" class="form-control" [(ngModel)]="newInput" (keyup.enter)="addTodo()" />
+      <ul *ngIf="list.todos">
+          <li *ngFor="let todo of list.todos"><todo [todo]="todo"></todo></li>
+      </ul>
+  </div>
+</div>
